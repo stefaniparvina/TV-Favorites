@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,38 @@ namespace TV_Favorites
     /// </summary>
     public partial class Game_Of_Thrones : Window
     {
+        private const int seriesId = 1;
+        private bool inList = false;
+        private UserLoginState loginState;
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=LAPTOP-PQLC5KSC\SQLEXPRESS;Initial Catalog=""TV Favorites"";Integrated Security=True");
         public Game_Of_Thrones()
         {
+            loginState = (UserLoginState)Properties.Settings.Default.UserLoginState;
+            if (loginState == null || loginState.IsLoggedIn == false)
+            {
+                Sign_Up sign_Up = new Sign_Up();
+                sign_Up.Show();
+                this.Close();
+            }
+
             InitializeComponent();
+
+            sqlCon.Open();
+
+            string query = "SELECT * FROM [WatchList] WHERE userId=@userId AND series=@seriesId";
+            SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+            sqlCmd.CommandType = CommandType.Text;
+            sqlCmd.Parameters.AddWithValue("@userId", loginState.Id);
+            sqlCmd.Parameters.AddWithValue("@seriesId", seriesId);
+            SqlDataReader reader;
+            reader = sqlCmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                inList = true;
+                toggle_series.Content = "Remove from Watchlist";
+            }
+            reader.Close();
         }
 
         private void logo_Button_Click(object sender, RoutedEventArgs e)
@@ -45,33 +76,20 @@ namespace TV_Favorites
             this.Close();
         }
 
-        private void WatchList_Button_Click(object sender, RoutedEventArgs e)
+        private void Toggle_Series_Button_Click(object sender, RoutedEventArgs e)
         {
-            /*SqlConnection sqlCon = new SqlConnection(@"Data Source=LAPTOP-PQLC5KSC\SQLEXPRESS;Initial Catalog=""TV Favorites"";Integrated Security=True");
-            try
+            string query = "INSERT INTO [WatchList] ([userId],[series]) VALUES(@userId,@seriesId)";
+            if (inList)
             {
-                sqlCon.Open();
-                string query = "INSERT INTO [User] (firstName, lastName, email, password) VALUES (@FirstName, @LastName, @Email, @Password)";
-                SqlCommand cmd = new SqlCommand(query, sqlCon);
-                cmd.Parameters.AddWithValue("@FirstName", sender.txtFirstName.Text);
-                cmd.Parameters.AddWithValue("@LastName", sender.txtLastName.Text);
-                cmd.Parameters.AddWithValue("@Email", sender.txtEmail.Text);
-                cmd.Parameters.AddWithValue("@Password", sender.txtPassword.Password);
-                cmd.ExecuteNonQuery();
-
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Successfully saved!");
+                query = "DELETE FROM [WatchList] WHERE userId=@userId AND series=@seriesId";
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally { sqlCon.Close(); }
-
-            Log_In log = new Log_In();
-            log.Show();
-            this.Close();*/
-
+            SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+            sqlCmd.CommandType = CommandType.Text;
+            sqlCmd.Parameters.AddWithValue("@userId", loginState.Id);
+            sqlCmd.Parameters.AddWithValue("@seriesId", seriesId);
+            sqlCmd.ExecuteNonQuery();
+            inList = !inList;
+            toggle_series.Content = inList ? "Remove from Watchlist" : "Add to Watchlist";
         }
     }
 }

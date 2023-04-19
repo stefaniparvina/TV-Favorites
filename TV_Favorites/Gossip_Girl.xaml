@@ -21,8 +21,8 @@
             VerticalAlignment="Top" Width="825" TextAlignment="Center" FontFamily="Javanese Text" LineHeight="1" FontSize="15"><Run Text="This expansive HBO drama is based on George R. R. Martin' best-selling book series 'A Song of Ice and Fire' and it takes place in a world where summers might stretch for decades and winters can last a lifetime. The strong houses of the Seven Kingdoms are engaged in conflicts for control of the Iron There from the cunning south and the barbaric eastern kingdoms to the frigid north and ancient Wall that guards the realm from the merging darkness beyond. That is a tale of deceit and betrayal, honor and nobility, conquest, and victory. As Cercei Lannister would say: "/><LineBreak/><Run Text="'In the Game of Thrones you either win or you die.'"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="337,660,0,0" TextWrapping="Wrap"
             VerticalAlignment="Top" Width="825" TextAlignment="Center" FontFamily="Javanese Text" LineHeight="1" FontSize="15" Height="68"><Run Text="Have you watched this series?"/><LineBreak/><Run Text="If not, but you would like to check it out some day, add it to you Watch List,"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
-        <Button BorderBrush="#FDFFB2" Content="Add to Watch List" HorizontalAlignment="Left" Margin="631,733,0,0" VerticalAlignment="Top" Width="233" 
-            Height="41" FontFamily="Javanese Text" FontSize="20" Background="#FDFFB2" FontWeight="Bold"/>
+        <Button x:Name="toggle_series" BorderBrush="#FDFFB2" Content="Add to Watch List" HorizontalAlignment="Left" Margin="631,733,0,0" VerticalAlignment="Top" Width="233" 
+            Height="41" FontFamily="Javanese Text" FontSize="20" Background="#FDFFB2" FontWeight="Bold" Click="Toggle_Series_Button_Click"/>
         <Rectangle HorizontalAlignment="Left" Height="91" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="1506" Fill="White"/>
         <Button x:Name="logo_button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="244.8" Height="91" Margin="10,0,0,0" BorderBrush="White" Click="Logo_Button_Click">
             <Button.Background>

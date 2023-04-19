@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,10 +25,15 @@ namespace TV_Favorites
     {
         public Main_Page()
         {
+            UserLoginState loginState = (UserLoginState)Properties.Settings.Default.UserLoginState;
+            if (loginState == null || loginState.IsLoggedIn == false)
+            {
+                Sign_Up sign_Up = new Sign_Up();
+                sign_Up.Show();
+                this.Close();
+            }
 
             InitializeComponent();
-
-            UserLoginState loginState = (UserLoginState)Properties.Settings.Default.UserLoginState;
         }
 
         private void got_button_Click(object sender, RoutedEventArgs e)

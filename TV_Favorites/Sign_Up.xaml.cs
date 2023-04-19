@@ -24,6 +24,13 @@ namespace TV_Favorites
         public Sign_Up()
         {
             InitializeComponent();
+            UserLoginState loginState = (UserLoginState)Properties.Settings.Default.UserLoginState;
+            if (loginState != null && loginState.IsLoggedIn)
+            {
+                Main_Page main_Page = new Main_Page();
+                main_Page.Show();
+                this.Close();
+            }
         }
         private void Button_Signup_Click(object sender, RoutedEventArgs e)
         {
