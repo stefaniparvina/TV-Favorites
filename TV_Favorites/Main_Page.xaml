@@ -1,0 +1,57 @@
+﻿<Window x:Class="TV_Favorites.Main_Page"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TV_Favorites"
+        mc:Ignorable="d"
+        Title="Main_Page" Height="862" Width="1512" WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"  WindowStyle="None">
+    <Grid Background="#FFFDFFB2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="254*"/>
+            <RowDefinition Height="177*"/>
+        </Grid.RowDefinitions>
+
+        <Rectangle HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="1506" Fill="White"/>
+
+
+
+        <Button x:Name="profile_button" Content="&#xA;Your Profile" HorizontalAlignment="Left" Margin="255,0,0,0" VerticalAlignment="Top" Width="170" 
+            Height="91" FontSize="23" Background="White" BorderBrush="White" FontFamily="Microsoft YaHei UI" Click="profile_button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="404,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="69" Width="641" TextAlignment="Center" LineHeight="9" FontFamily="Sitka Heading" FontWeight="Bold" FontSize="30"><Run Text="Do you like watching TV shows? "/><LineBreak/><Run Text="If yes, this is the place for you!"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="77,374,0,0" TextWrapping="Wrap"
+            VerticalAlignment="Top" Width="427" FontFamily="Javanese Text" LineHeight="1" FontSize="25" Text="This is our selection of TV favorites:" Height="57"/>
+
+        <Button x:Name="gg_button" Margin="1024,454,39,294" Click="gg_button_Click" Grid.RowSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="Image7.png"/>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="friends_button" Margin="529,454,535,294" Click="friends_button_Click" Grid.RowSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="Image8.png"/>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="got_button" Margin="78,454,1008,294" BorderBrush="Black" Click="got_button_Click" Grid.RowSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="Image6.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+
+        <!--svurji si s database ili neshto si nz i drag i drop/ hopefully david remembers-->
+        <StackPanel Margin="556,25,50,430">
+            <Label Content="Select an option:" FontSize="15" />
+            <ComboBox x:Name="myComboBox" Background="White" FontSize="15" RenderTransformOrigin="0.5,0.519">
+                <ComboBoxItem Content="Game of Thrones" />
+                <ComboBoxItem Content="Gossip Girl" />
+                <ComboBoxItem Content="Friends" />
+            </ComboBox>
+        </StackPanel>
+
+        <Image x:Name="logo" Source="C:\Users\stefa\OneDrive\Desktop\School\Final Project\logo.jpg" 
+            HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Margin="10,0,0,0"/>
+    </Grid>
+</Window>

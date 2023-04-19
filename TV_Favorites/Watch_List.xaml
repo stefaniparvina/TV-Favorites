@@ -1,0 +1,29 @@
+﻿<Window x:Class="TV_Favorites.Watch_List"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TV_Favorites"
+        mc:Ignorable="d"
+        Title="Watch_List"  Height="862" Width="1512" WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"  WindowStyle="None">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\stefa\OneDrive\Desktop\School\Final Project\background-6.jpeg" />
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Left" Height="91" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="1506" Fill="White"/>
+        <Button x:Name="logo_button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="244.8" Height="91" Margin="10,0,0,0" BorderBrush="White" Click="logo_button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="logo.jpg"/>
+            </Button.Background>
+        </Button>
+        
+        <Button x:Name="mainPage_link" Content="&#xA;Main Page" HorizontalAlignment="Left" Margin="258,0,0,0" VerticalAlignment="Top" Width="170" 
+            Height="91" FontSize="23" Background="White" BorderBrush="White" FontFamily="Microsoft YaHei UI" Click="mainPage_link_Click"/>
+        
+        <Image Margin="661,151,695.6,674.8" Source="Image10.png" Stretch="Fill"/>
+        <TextBlock HorizontalAlignment="Left" Margin="653,283,0,0" TextWrapping="Wrap" Text="Watch List" VerticalAlignment="Top" Height="60" Width="168" FontFamily="Javanese Text" FontSize="30" TextAlignment="Center"/>
+        <DataGrid HorizontalAlignment="Left" Height="415" Margin="472,348,0,0" VerticalAlignment="Top" Width="530"/>
+        <Button x:Name="previousPage_button" Content="Previous Page" BorderBrush="Black" HorizontalAlignment="Left" Margin="681,822,0,0" VerticalAlignment="Top" Width="117" Height="19" Background="Transparent" Click="previousPage_button_Click"/>
+    </Grid>
+</Window>

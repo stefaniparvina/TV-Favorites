@@ -1,0 +1,62 @@
+﻿<Window x:Class="TV_Favorites.Log_In"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TV_Favorites"
+        mc:Ignorable="d"
+        Title="Log_In" Height="862" Width="1512" WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"  WindowStyle="None">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\stefa\OneDrive\Desktop\School\Final Project\background-2-.jpeg" />
+        </Grid.Background>
+
+        <Border Background="White" HorizontalAlignment="Left" Height="91" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="1506">
+            <Image x:Name="logo" Source="C:\Users\stefa\OneDrive\Desktop\School\Final Project\logo.jpg" 
+                HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Margin="10,0,0,0"/>
+        </Border>
+        <Border CornerRadius="20" Background="#FDFFB2" Margin="347,263,373,158" RenderTransformOrigin="0.474,1.233">
+            <StackPanel>
+                <TextBox x:Name="txtEmail" Height="56" TextWrapping="Wrap"
+                    Margin="145,120,119.6,0" FontFamily="Javanese Text" FontSize="30"
+                    Opacity="0.5" Background="#97959C" Foreground="Black" Width="426"/>
+                <PasswordBox x:Name="txtPassword" Height="55" 
+                    Margin="145,70,119.6,0" FontFamily="Javanese Text" FontSize="30" Opacity="0.5" Background="#97959C" Foreground="Black" RenderTransformOrigin="0.472,4.92" Width="426"/>
+            </StackPanel>
+
+
+
+
+        </Border>
+        <Image Margin="663,131,696,616" Source="Image2.png" Stretch="Fill"/>
+        <Image Margin="463,373,1001,512" Source="Image3.png" Stretch="Fill"/>
+        <Image Margin="453,541,989,335" Source="Image4.png" Stretch="Fill"/>
+        <TextBlock HorizontalAlignment="Left" Margin="606,795,0,0" TextWrapping="Wrap" Text="Do not have an accaunt?" VerticalAlignment="Top" FontFamily="Javanese Text" FontSize="20"/>
+        <Button x:Name="Signup_button" Content="Sign Up" BorderBrush="Transparent" Background="Transparent"  HorizontalAlignment="Left" Margin="821,793,0,0" VerticalAlignment="Top" Width="81" FontFamily="Javanese Text" FontSize="20" Height="36" Click="Signup_button_Click"/>
+        <Border 
+            Background="Black" 
+            CornerRadius="50"
+            VerticalAlignment="Bottom"
+            Padding="10" 
+            Height="74" Margin="619,0,646.6,188.8">
+            <Button x:Name="Button_login"
+                Template="{StaticResource NoMouseOverButtonTemplate}"
+                Content="Log In" 
+                Margin="21.4,-6.6,21.4,-7.4" 
+                Padding="1" 
+                Background="Black" 
+                Foreground="White" 
+                FontSize="20" 
+                FontWeight="Bold" 
+                BorderThickness="0" FontFamily="Javanese Text" Click="Button_login_Click"/>
+        </Border>
+        <TextBlock HorizontalAlignment="Left" Margin="540,338,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" FontSize="30" FontFamily="Javanese Text"/>
+        <TextBlock HorizontalAlignment="Left" Margin="540,463,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontSize="30" FontFamily="Javanese Text"/>
+
+
+
+
+
+    </Grid>
+</Window>

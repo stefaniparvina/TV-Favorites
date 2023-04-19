@@ -1,0 +1,110 @@
+﻿<Window x:Class="TV_Favorites.Profile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TV_Favorites"
+        mc:Ignorable="d"
+        Title="Profile"  Height="862" Width="1512" WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"  WindowStyle="None">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\stefa\OneDrive\Desktop\School\Final Project\background-6.jpeg" />
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Left" Height="91" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="1506" Fill="White"/>
+
+        <Button x:Name="logo_button" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="245" Height="91" Margin="10,0,0,875" BorderBrush="White" Click="logo_button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="logo.jpg"/>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="mainPage_link" Content="&#xA;Main Page" HorizontalAlignment="Left" Margin="258,0,0,0" VerticalAlignment="Top" Width="170" 
+            Height="91" FontSize="23" Background="White" BorderBrush="White" FontFamily="Microsoft YaHei UI" Click="mainPage_link_Click"/>
+
+
+        <TextBox x:Name="txtFirstName" TextWrapping="Wrap" Text="       First Name" 
+                         FontFamily="Javanese Text" FontSize="30" 
+                         UseLayoutRounding="True" Background="#97959C" Foreground="White" Opacity="0.5" Margin="817,436,343.6,463.8"/>
+        <TextBox x:Name="txtLastName" TextWrapping="Wrap" Text="       Last Name" 
+                          FontFamily="Javanese Text" FontSize="30" Opacity="0.5" Background="#97959C" Foreground="White"  Margin="818,510,342.6,389.8"/>
+        <TextBox x:Name="txtEmail" TextWrapping="Wrap" Text="       Email" 
+                          FontFamily="Javanese Text" FontSize="30"
+                         Opacity="0.5" Background="#97959C" Foreground="White" Margin="818,584,342.6,314.8"/>
+        <TextBox x:Name="txtPassword" TextWrapping="Wrap" Text="       Birthday" 
+                          FontFamily="Javanese Text" FontSize="30" Opacity="0.5" Background="#97959C" Foreground="White" Margin="818,660,342.6,239.8"/>
+        <TextBlock HorizontalAlignment="Left" Margin="818,361,0,0" TextWrapping="Wrap" Text="Update your information:" VerticalAlignment="Top" FontFamily="Javanese Text" FontSize="30"/>
+        <Border 
+            Background="white" 
+            CornerRadius="50"
+            VerticalAlignment="Bottom"
+            Padding="10" 
+            Height="51" Margin="1191,0,167.6,467.8">
+            <Button x:Name="button_signup"
+                Template="{StaticResource NoMouseOverButtonTemplate}"
+                Content="Update" 
+                Margin="23.4,-4.6,21.8,-7.2" 
+                Padding="1" 
+                Background="White" 
+                Foreground="Black" 
+                FontSize="20" 
+                BorderThickness="0" FontFamily="Javanese Text" Height="43" VerticalAlignment="Bottom"/>
+        </Border>
+        <Border 
+            Background="white" 
+            CornerRadius="50"
+            VerticalAlignment="Bottom"
+            Padding="10" 
+            Height="51" Margin="1191,0,167.6,243.8">
+            <Button x:Name="button_signup1"
+                Template="{StaticResource NoMouseOverButtonTemplate}"
+                Content="Update" 
+                Margin="23.4,-4.6,21.8,-7.2" 
+                Padding="1" 
+                Background="White" 
+                Foreground="Black" 
+                FontSize="20" 
+                BorderThickness="0" FontFamily="Javanese Text" Height="43" VerticalAlignment="Bottom"/>
+        </Border>
+        <Border 
+            Background="white" 
+            CornerRadius="50"
+            VerticalAlignment="Bottom"
+            Padding="10" 
+            Height="51" Margin="1191,0,167.6,317.8">
+            <Button x:Name="button_signup2"
+                Template="{StaticResource NoMouseOverButtonTemplate}"
+                Content="Update" 
+                Margin="23.4,-4.6,21.8,-7.2" 
+                Padding="1" 
+                Background="White" 
+                Foreground="Black" 
+                FontSize="20" 
+                BorderThickness="0" FontFamily="Javanese Text" Height="43" VerticalAlignment="Bottom"/>
+        </Border>
+        <Border 
+            Background="white" 
+            CornerRadius="50"
+            VerticalAlignment="Bottom"
+            Padding="10" 
+            Height="51" Margin="1191,0,167.6,389.8">
+            <Button x:Name="button_signup3"
+                Template="{StaticResource NoMouseOverButtonTemplate}"
+                Content="Update" 
+                Margin="23.4,-4.6,21.8,-7.2" 
+                Padding="1" 
+                Background="White" 
+                Foreground="Black" 
+                FontSize="20" 
+                BorderThickness="0" FontFamily="Javanese Text" Height="43" VerticalAlignment="Bottom"/>
+        </Border>
+
+        <Button x:Name="watchList_button" Content="Your Watch List" HorizontalAlignment="Left" 
+                Margin="817,754,0,0" VerticalAlignment="Top" Width="210" Height="34" FontSize="15" 
+                Background="#FFFDFFB2" FontWeight="Bold" FontFamily="Javanese Text" Click="watchList_button_Click"/>
+
+        <Image Margin="661,151,681.6,674.8" Source="Image9.png" Stretch="Fill"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="132,460,992,285" Width="NaN"/>
+
+    </Grid>
+</Window>
