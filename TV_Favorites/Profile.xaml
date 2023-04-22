@@ -104,7 +104,8 @@
                 Background="#FFFDFFB2" FontWeight="Bold" FontFamily="Javanese Text" Click="watchList_button_Click"/>
 
         <Image Margin="661,151,681.6,674.8" Source="Image9.png" Stretch="Fill"/>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="132,460,992,285" Width="NaN"/>
+        <DataGrid x:Name="profile" Margin="220,344,904,467" AutoGenerateColumns="True" CanUserAddRows="False"/>
+        <Button x:Name="saveChanges" Content="Update" HorizontalAlignment="Left" Click="saveChanges_Click" Margin="613,346,0,467" Width="106"></Button>
 
     </Grid>
 </Window>
