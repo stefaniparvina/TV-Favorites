@@ -97,11 +97,12 @@
 
         <!--svurji si s database ili neshto si nz i drag i drop/ hopefully david remembers-->
         <StackPanel Margin="1224,10,41,67">
-            <Label Content="Select TV Shows (Double Click):" FontSize="15" />
-            <ComboBox x:Name="myComboBox" Background="White" FontSize="15" RenderTransformOrigin="0.5,0.519">
-                <ComboBoxItem Content="Game of Thrones" MouseDoubleClick="got_MouseDoubleClick"/>
-                <ComboBoxItem Content="Gossip Girl" MouseDoubleClick="gg_MouseDoubleClick"/>
-                <ComboBoxItem Content="Friends" MouseDoubleClick="friends_MouseDoubleClick" />
+            <Label Content="Select TV Shows:" FontSize="15" />
+            <ComboBox x:Name="myComboBox" Background="White" FontSize="15" RenderTransformOrigin="0.5,0.519"
+          SelectionChanged="myComboBox_SelectionChanged">
+                <ComboBoxItem Content="Game of Thrones" />
+                <ComboBoxItem Content="Gossip Girl" />
+                <ComboBoxItem Content="Friends" />
             </ComboBox>
         </StackPanel>
 

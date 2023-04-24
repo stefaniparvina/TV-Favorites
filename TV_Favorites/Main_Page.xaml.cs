@@ -64,24 +64,32 @@ namespace TV_Favorites
             this.Close();
         }
 
-        private void got_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void myComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Game_Of_Thrones got = new Game_Of_Thrones();
-            got.Show();
-            this.Close();
+            ComboBoxItem selectedItem = (ComboBoxItem)myComboBox.SelectedItem;
+            string selectedItemText = selectedItem.Content.ToString();
+
+            switch (selectedItemText)
+            {
+                case "Game of Thrones":
+                    Game_Of_Thrones got = new Game_Of_Thrones();
+                    got.Show();
+                    this.Close();
+                    break;
+                case "Gossip Girl":
+                    Gossip_Girl gg = new Gossip_Girl();
+                    gg.Show();
+                    this.Close();
+                    break;
+                case "Friends":
+                    Friends fr = new Friends();
+                    fr.Show();
+                    this.Close();
+                    break;
+                default:
+                    break;
+            }
         }
 
-        private void gg_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            Gossip_Girl gg = new Gossip_Girl();
-            gg.Show();
-            this.Close();
-        }
-        private void friends_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            Friends fr = new Friends();
-            fr.Show();
-            this.Close();
-        }
     }
 }
