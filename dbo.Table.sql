@@ -5,4 +5,5 @@
     [lastName] VARCHAR(MAX) NOT NULL, 
     [password] VARCHAR(MAX) NOT NULL, 
     [birthday] DATE NULL,
+    [id] int IDENTITY(1,1) NOT NULL
 )

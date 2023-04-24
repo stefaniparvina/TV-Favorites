@@ -206,5 +206,20 @@
   <ItemGroup>
     <Resource Include="Image10.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="got-all.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="got-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="button got.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="button-got.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="got screenshot.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

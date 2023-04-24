@@ -63,5 +63,25 @@ namespace TV_Favorites
             p.Show();
             this.Close();
         }
+
+        private void got_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Game_Of_Thrones got = new Game_Of_Thrones();
+            got.Show();
+            this.Close();
+        }
+
+        private void gg_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Gossip_Girl gg = new Gossip_Girl();
+            gg.Show();
+            this.Close();
+        }
+        private void friends_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Friends fr = new Friends();
+            fr.Show();
+            this.Close();
+        }
     }
 }

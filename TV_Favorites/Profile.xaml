@@ -11,16 +11,17 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\stefa\OneDrive\Desktop\School\Final Project\background-6.jpeg" />
         </Grid.Background>
-        <Rectangle HorizontalAlignment="Left" Height="91" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="1506" Fill="White"/>
+        <Rectangle HorizontalAlignment="Center" Height="91" VerticalAlignment="Top" Width="1512" Fill="White"/>
 
-        <Button x:Name="logo_button" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="245" Height="91" Margin="10,0,0,875" BorderBrush="White" Click="logo_button_Click">
+        <Button x:Name="logo_button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="244.8" Height="91" Margin="10,0,0,0" 
+                BorderBrush="White" Click="logo_button_Click" Template="{StaticResource NoMouseOverButtonTemplate}">
             <Button.Background>
                 <ImageBrush ImageSource="logo.jpg"/>
             </Button.Background>
         </Button>
 
         <Button x:Name="mainPage_link" Content="&#xA;Main Page" HorizontalAlignment="Left" Margin="258,0,0,0" VerticalAlignment="Top" Width="170" 
-            Height="91" FontSize="23" Background="White" BorderBrush="White" FontFamily="Microsoft YaHei UI" Click="mainPage_link_Click"/>
+            Height="91" FontSize="23" Background="White" BorderBrush="White" FontFamily="Microsoft YaHei UI" Click="mainPage_link_Click" Template="{StaticResource NoMouseOverButtonTemplate}"/>
 
 
         <TextBox x:Name="txtFirstName" TextWrapping="Wrap" Text="       First Name" 

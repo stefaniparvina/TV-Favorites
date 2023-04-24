@@ -58,7 +58,7 @@ namespace TV_Favorites
                     Properties.Settings.Default.UserLoginState = new UserLoginState
                     {
                         IsLoggedIn = true,
-                        Id = reader.IsDBNull(0) ? 0 : reader.GetInt64(0),
+                        Id = reader.IsDBNull(0) ? 0 : reader.GetInt32(0),
                         Email = reader.IsDBNull(1) ? null : reader.GetString(1),
                         FirstName = reader.IsDBNull(2) ? null : reader.GetString(2),
                         LastName = reader.IsDBNull(3) ? null : reader.GetString(3),

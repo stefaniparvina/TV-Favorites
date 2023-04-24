@@ -41,7 +41,7 @@ namespace TV_Favorites
 
             sqlCon.Open();
 
-            string query = "SELECT * FROM [WatchList] WHERE userId=@userId AND series=@seriesId";
+            string query = "SELECT * FROM [WatchList] WHERE userId=@userId AND seriesId=@seriesId";
             SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
             sqlCmd.CommandType = CommandType.Text;
             sqlCmd.Parameters.AddWithValue("@userId", loginState.Id);
@@ -80,10 +80,10 @@ namespace TV_Favorites
 
         private void Toggle_Series_Button_Click(object sender, RoutedEventArgs e)
         {
-            string query = "INSERT INTO [WatchList] ([userId],[series]) VALUES(@userId,@seriesId)";
+            string query = "INSERT INTO [WatchList] ([userId],[seriesId]) VALUES(@userId,@seriesId)";
             if (inList)
             {
-                query = "DELETE FROM [WatchList] WHERE userId=@userId AND series=@seriesId";
+                query = "DELETE FROM [WatchList] WHERE userId=@userId AND seriesId=@seriesId";
             }
             SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
             sqlCmd.CommandType = CommandType.Text;

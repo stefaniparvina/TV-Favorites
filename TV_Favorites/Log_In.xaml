@@ -33,7 +33,9 @@
         <Image Margin="463,373,1001,512" Source="Image3.png" Stretch="Fill"/>
         <Image Margin="453,541,989,335" Source="Image4.png" Stretch="Fill"/>
         <TextBlock HorizontalAlignment="Left" Margin="606,795,0,0" TextWrapping="Wrap" Text="Do not have an accaunt?" VerticalAlignment="Top" FontFamily="Javanese Text" FontSize="20"/>
-        <Button x:Name="Signup_button" Content="Sign Up" BorderBrush="Transparent" Background="Transparent"  HorizontalAlignment="Left" Margin="821,793,0,0" VerticalAlignment="Top" Width="81" FontFamily="Javanese Text" FontSize="20" Height="36" Click="Signup_button_Click"/>
+        <Button x:Name="Signup_button" Content="Sign Up" BorderBrush="Transparent" 
+                Background="Transparent"  HorizontalAlignment="Left" Margin="821,793,0,0" VerticalAlignment="Top" Width="81" 
+                FontFamily="Javanese Text" FontSize="20" Height="36" Click="Signup_button_Click"  Template="{StaticResource NoMouseOverButtonTemplate}"/>
         <Border 
             Background="Black" 
             CornerRadius="50"

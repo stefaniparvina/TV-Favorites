@@ -9,9 +9,9 @@
         ResizeMode="CanMinimize"  WindowStyle="None">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\stefa\OneDrive\Desktop\School\Final Project\backgroung-4.jpeg"/>
+            <ImageBrush ImageSource="C:\Users\stefa\OneDrive\Desktop\School\Final Project\backgroung-4.jpeg" Stretch="UniformToFill"/>
         </Grid.Background>
-       
+
         <Rectangle HorizontalAlignment="Left" Margin="244,260,0,0" Stroke="Transparent" VerticalAlignment="Top" Height="552" Width="1023">
             <Rectangle.Fill>
                 <SolidColorBrush Color="#FFD9D9D9" Opacity="0.8"/>
@@ -23,16 +23,16 @@
             VerticalAlignment="Top" Width="825" TextAlignment="Center" FontFamily="Javanese Text" LineHeight="1" FontSize="15" Height="68"><Run Text="Have you watched this series?"/><LineBreak/><Run Text="If not, but you would like to check it out some day, add it to you Watch List,"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
         <Button x:Name="toggle_series" BorderBrush="#FDFFB2" Content="Add to Watch List" HorizontalAlignment="Left" Margin="631,733,0,0" VerticalAlignment="Top" Width="233" 
             Height="41" FontFamily="Javanese Text" FontSize="20" Background="#FDFFB2" FontWeight="Bold" Click="Toggle_Series_Button_Click"/>
-        <Rectangle HorizontalAlignment="Left" Height="91" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="1506" Fill="White"/>
-        <Button x:Name="logo_button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="244.8" Height="91" Margin="10,0,0,0" BorderBrush="White" Click="Logo_Button_Click">
+        <Rectangle HorizontalAlignment="Center" Height="91" VerticalAlignment="Top" Width="1512" Fill="White"/>
+        <Button x:Name="logo_button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="244.8" Height="91" Margin="10,0,0,0" BorderBrush="White" Click="Logo_Button_Click" Template="{StaticResource NoMouseOverButtonTemplate}">
             <Button.Background>
                 <ImageBrush ImageSource="logo.jpg"/>
             </Button.Background>
         </Button>
         <Button x:Name="mainPage_link" Content="&#xD;&#xA;Main Page" HorizontalAlignment="Left" Margin="261,0,0,0" VerticalAlignment="Top" Width="170" 
-            Height="91" FontSize="23" Background="White" BorderBrush="White" FontFamily="Microsoft YaHei UI" Click="mainPage_link_Click"/>
+            Height="91" FontSize="23" Background="White" BorderBrush="White" FontFamily="Microsoft YaHei UI" Click="mainPage_link_Click" Template="{StaticResource NoMouseOverButtonTemplate}"/>
         <Button Content="&#xD;&#xA;Your Profile" HorizontalAlignment="Left" Margin="433,0,0,0" VerticalAlignment="Top" Width="170" 
-            Height="91" FontSize="23" Background="White" BorderBrush="White" FontFamily="Microsoft YaHei UI" Click="Button_Click"/>
+            Height="91" FontSize="23" Background="White" BorderBrush="White" FontFamily="Microsoft YaHei UI" Click="Button_Click" Template="{StaticResource NoMouseOverButtonTemplate}"/>
 
 
 

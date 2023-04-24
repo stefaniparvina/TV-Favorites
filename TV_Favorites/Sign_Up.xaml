@@ -19,7 +19,9 @@
         </Border>
 
         <Image Margin="691,115,675,640" Source="Image1.png" Stretch="Fill" RenderTransformOrigin="0.466,0.849"/>
-        <Button x:Name="Login_button" Content="Log In" BorderBrush="Transparent" Background="Transparent"  HorizontalAlignment="Left" Margin="802,804,0,0" VerticalAlignment="Top" Width="70" FontFamily="Javanese Text" FontSize="20" Height="36" Click="Login_button_Click"/>
+        <Button x:Name="Login_button" Content="Log In" BorderBrush="Transparent" Background="Transparent"  
+                HorizontalAlignment="Left" Margin="802,804,0,0" VerticalAlignment="Top" Width="70" FontFamily="Javanese Text"
+                FontSize="20" Height="36" Click="Login_button_Click" Template="{StaticResource NoMouseOverButtonTemplate}"/>
 
 
         <Border CornerRadius="20" Background="#666666" Margin="346,227,352,152" Height="483">

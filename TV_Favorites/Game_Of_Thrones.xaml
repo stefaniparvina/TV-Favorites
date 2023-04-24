@@ -9,11 +9,12 @@
         ResizeMode="CanMinimize"  WindowStyle="None">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\stefa\Downloads\background-3.jpeg"/>
+            <ImageBrush ImageSource="C:\Users\stefa\Downloads\background-3.jpeg" Stretch="UniformToFill"/>
         </Grid.Background>
 
-        <Rectangle HorizontalAlignment="Left" Height="91" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="1506" Fill="White"/>
-        <Button x:Name="logo_button" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="245" Height="92" Margin="10,0,0,875" BorderBrush="White" Click="logo_Button_Click">
+        <Rectangle HorizontalAlignment="Center" Height="91" VerticalAlignment="Top" Width="1512" Fill="White"/>
+        <Button x:Name="logo_button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="244.8" Height="91" Margin="10,0,0,0" Template="{StaticResource NoMouseOverButtonTemplate}"
+                BorderBrush="White" Click="logo_Button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="logo.jpg"/>
             </Button.Background>
@@ -31,9 +32,9 @@
         <Button x:Name="toggle_series" BorderBrush="#FDFFB2" Content="Add to Watch List" HorizontalAlignment="Left" Margin="631,733,0,0" VerticalAlignment="Top" Width="233" 
                 Height="41" FontFamily="Javanese Text" FontSize="20" Background="#FDFFB2" FontWeight="Bold"  Click="Toggle_Series_Button_Click"/>
         <Button x:Name="mainPage_link" Content="&#xD;&#xA;Main Page" HorizontalAlignment="Left" Margin="261,0,0,0" VerticalAlignment="Top" Width="170" 
-                Height="91" FontSize="23" Background="White" BorderBrush="White" FontFamily="Microsoft YaHei UI" Click="mainPage_link_Click"/>
+                Height="91" FontSize="23" Background="White" BorderBrush="White" FontFamily="Microsoft YaHei UI" Click="mainPage_link_Click" Template="{StaticResource NoMouseOverButtonTemplate}"/>
         <Button x:Name="profile_link" Content="&#xD;&#xA;Your Profile" HorizontalAlignment="Left" Margin="436,0,0,0" VerticalAlignment="Top" Width="170" 
-                Height="91" FontSize="23" Background="White" BorderBrush="White" FontFamily="Microsoft YaHei UI" Click="profile_Link_Click"/>
+                Height="91" FontSize="23" Background="White" BorderBrush="White" FontFamily="Microsoft YaHei UI" Click="profile_Link_Click" Template="{StaticResource NoMouseOverButtonTemplate}"/>
 
     </Grid>
 </Window>

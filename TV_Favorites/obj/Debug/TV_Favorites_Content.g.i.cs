@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("logo_game_of_thrones.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("got%20screenshot.png")]
 
 
