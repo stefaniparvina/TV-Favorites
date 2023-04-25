@@ -57,28 +57,24 @@ namespace TV_Favorites
             {
                 sqlCon.Open();
 
-                // Check if first name is valid
                 if (!IsValidField(txtFirstName.Text))
                 {
                     MessageBox.Show("First name is required");
                     return;
                 }
 
-                // Check if last name is valid
                 if (!IsValidField(txtLastName.Text))
                 {
                     MessageBox.Show("Last name is required");
                     return;
                 }
 
-                // Check if email is valid
                 if (!IsValidEmail(txtEmail.Text))
                 {
                     MessageBox.Show("Invalid email address");
                     return;
                 }
 
-                // Check if email already exists
                 string query = "SELECT COUNT(*) FROM [User] WHERE email = @Email";
                 SqlCommand cmd = new SqlCommand(query, sqlCon);
                 cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
@@ -90,14 +86,12 @@ namespace TV_Favorites
                     return;
                 }
 
-                // Check if password is valid
                 if (!IsValidField(txtPassword.Password))
                 {
                     MessageBox.Show("Password is required");
                     return;
                 }
 
-                // Insert user data into database
                 query = "Insert into [User] (firstName, lastname, email, password) values (@FirstName, @LastName, @Email, @Password)";
                 cmd = new SqlCommand(query, sqlCon);
                 cmd.Parameters.AddWithValue("@FirstName", txtFirstName.Text);

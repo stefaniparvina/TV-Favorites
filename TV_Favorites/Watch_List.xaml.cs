@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace TV_Favorites
 {
-    /// <summary>
-    /// Interaction logic for Watch_List.xaml
-    /// </summary>
     public partial class Watch_List : Window
     {
         private UserLoginState loginState;
@@ -58,13 +55,10 @@ namespace TV_Favorites
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            // Get the selected row
             DataRowView rowView = (DataRowView)watchListDataGrid.SelectedItem;
 
-            // Get the WatchList ID
             int watchlistId = Convert.ToInt32(rowView["id"]);
 
-            // Delete the record from the WatchList table
             sqlCon.Open();
             string deleteQuery = "DELETE FROM WatchList WHERE id = @watchlistId";
             SqlCommand deleteCmd = new SqlCommand(deleteQuery, sqlCon);
@@ -73,7 +67,6 @@ namespace TV_Favorites
             deleteCmd.ExecuteNonQuery();
             sqlCon.Close();
 
-            // Refresh the DataGrid
             table.Rows.Remove(rowView.Row);
         }
 
@@ -127,6 +120,5 @@ namespace TV_Favorites
                     break;
             }
         }
-
     }
 }

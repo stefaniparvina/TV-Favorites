@@ -25,7 +25,7 @@
         <Image Margin="667,151,690,584" Source="Image10.png" Stretch="Fill"/>
         <TextBlock HorizontalAlignment="Left" Margin="653,283,0,0" TextWrapping="Wrap" Text="Watchlist" VerticalAlignment="Top" Height="60" Width="168" FontFamily="Javanese Text" FontSize="30" TextAlignment="Center"/>
 
-        <DataGrid x:Name="watchListDataGrid" HorizontalAlignment="Center" Height="Auto" Margin="0,401,0,0" VerticalAlignment="Top" Width="530" CanUserAddRows="False" IsReadOnly="True" AutoGenerateColumns="False" FontSize="20" AlternatingRowBackground="LightGray" FontFamily="Javanese Text">
+        <DataGrid x:Name="watchListDataGrid" HorizontalAlignment="Left" Height="306" Margin="485,371,0,0" VerticalAlignment="Top" Width="530" CanUserAddRows="False" IsReadOnly="True" AutoGenerateColumns="False" FontSize="20" AlternatingRowBackground="LightGray" FontFamily="Javanese Text">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="TV Series" Binding="{Binding Title}" Width="*"/>
                 <DataGridTemplateColumn Header="">
@@ -38,7 +38,7 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button x:Name="previousPage_button" Content="Previous Page" BorderBrush="Black" HorizontalAlignment="Left" Margin="681,774,0,0" VerticalAlignment="Top" Width="120" Height="28" Background="Transparent" Click="previousPage_button_Click" FontSize="15"/>
+        <Button x:Name="previousPage_button" Content="Previous Page" BorderBrush="Black" HorizontalAlignment="Left" Margin="681,774,0,0" VerticalAlignment="Top" Width="120" Height="34" Background="Transparent" Click="previousPage_button_Click" FontSize="15" BorderThickness="0,0,0,1" Template="{StaticResource NoMouseOverButtonTemplate}"/>
 
         <StackPanel Margin="1224,10,41,67">
             <Label Content="Select TV Shows:" FontSize="15" />
