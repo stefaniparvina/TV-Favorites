@@ -43,7 +43,7 @@ namespace TV_Favorites
             {
                 sqlCon.Open();
 
-                string query = "SELECT id, email, firstName, lastName, birthday FROM [User] WHERE email=@email AND password=@password";
+                string query = "SELECT id, email, firstName, lastName FROM [User] WHERE email=@email AND password=@password";
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
                 sqlCmd.CommandType = CommandType.Text;
                 sqlCmd.Parameters.AddWithValue("@email", txtEmail.Text);
@@ -54,7 +54,6 @@ namespace TV_Favorites
                 {
                     reader.Read();
 
-                    // Set the login state
                     Properties.Settings.Default.UserLoginState = new UserLoginState
                     {
                         IsLoggedIn = true,
@@ -62,7 +61,6 @@ namespace TV_Favorites
                         Email = reader.IsDBNull(1) ? null : reader.GetString(1),
                         FirstName = reader.IsDBNull(2) ? null : reader.GetString(2),
                         LastName = reader.IsDBNull(3) ? null : reader.GetString(3),
-                        BirthDay = reader.IsDBNull(4) ? DateTime.MinValue : reader.GetDateTime(4)
                     };
                     Properties.Settings.Default.Save();
 

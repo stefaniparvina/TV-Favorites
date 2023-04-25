@@ -25,7 +25,7 @@
         <Image Margin="667,151,690,584" Source="Image10.png" Stretch="Fill"/>
         <TextBlock HorizontalAlignment="Left" Margin="653,283,0,0" TextWrapping="Wrap" Text="Watchlist" VerticalAlignment="Top" Height="60" Width="168" FontFamily="Javanese Text" FontSize="30" TextAlignment="Center"/>
 
-        <DataGrid x:Name="watchListDataGrid" HorizontalAlignment="Left" Height="306" Margin="485,371,0,0" VerticalAlignment="Top" Width="530" CanUserAddRows="False" IsReadOnly="True" AutoGenerateColumns="False" FontSize="20" AlternatingRowBackground="LightGray" FontFamily="Javanese Text">
+        <DataGrid x:Name="watchListDataGrid" HorizontalAlignment="Left" Height="Auto" Margin="485,371,0,0" VerticalAlignment="Top" Width="530" CanUserAddRows="False" IsReadOnly="True" AutoGenerateColumns="False" FontSize="20" AlternatingRowBackground="LightGray" FontFamily="Javanese Text">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="TV Series" Binding="{Binding Title}" Width="*"/>
                 <DataGridTemplateColumn Header="">
