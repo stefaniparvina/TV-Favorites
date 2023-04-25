@@ -24,89 +24,24 @@
             Height="91" FontSize="23" Background="White" BorderBrush="White" FontFamily="Microsoft YaHei UI" Click="mainPage_link_Click" Template="{StaticResource NoMouseOverButtonTemplate}"/>
 
 
-        <TextBox x:Name="txtFirstName" TextWrapping="Wrap" Text="       First Name" 
-                         FontFamily="Javanese Text" FontSize="30" 
-                         UseLayoutRounding="True" Background="#97959C" Foreground="White" Opacity="0.5" Margin="817,436,343.6,463.8"/>
-        <TextBox x:Name="txtLastName" TextWrapping="Wrap" Text="       Last Name" 
-                          FontFamily="Javanese Text" FontSize="30" Opacity="0.5" Background="#97959C" Foreground="White"  Margin="818,510,342.6,389.8"/>
-        <TextBox x:Name="txtEmail" TextWrapping="Wrap" Text="       Email" 
-                          FontFamily="Javanese Text" FontSize="30"
-                         Opacity="0.5" Background="#97959C" Foreground="White" Margin="818,584,342.6,314.8"/>
-        <TextBox x:Name="txtPassword" TextWrapping="Wrap" Text="       Birthday" 
-                          FontFamily="Javanese Text" FontSize="30" Opacity="0.5" Background="#97959C" Foreground="White" Margin="818,660,342.6,239.8"/>
-        <TextBlock HorizontalAlignment="Left" Margin="818,361,0,0" TextWrapping="Wrap" Text="Update your information:" VerticalAlignment="Top" FontFamily="Javanese Text" FontSize="30"/>
-        <Border 
-            Background="white" 
-            CornerRadius="50"
-            VerticalAlignment="Bottom"
-            Padding="10" 
-            Height="51" Margin="1191,0,167.6,467.8">
-            <Button x:Name="button_signup"
-                Template="{StaticResource NoMouseOverButtonTemplate}"
-                Content="Update" 
-                Margin="23.4,-4.6,21.8,-7.2" 
-                Padding="1" 
-                Background="White" 
-                Foreground="Black" 
-                FontSize="20" 
-                BorderThickness="0" FontFamily="Javanese Text" Height="43" VerticalAlignment="Bottom"/>
-        </Border>
-        <Border 
-            Background="white" 
-            CornerRadius="50"
-            VerticalAlignment="Bottom"
-            Padding="10" 
-            Height="51" Margin="1191,0,167.6,243.8">
-            <Button x:Name="button_signup1"
-                Template="{StaticResource NoMouseOverButtonTemplate}"
-                Content="Update" 
-                Margin="23.4,-4.6,21.8,-7.2" 
-                Padding="1" 
-                Background="White" 
-                Foreground="Black" 
-                FontSize="20" 
-                BorderThickness="0" FontFamily="Javanese Text" Height="43" VerticalAlignment="Bottom"/>
-        </Border>
-        <Border 
-            Background="white" 
-            CornerRadius="50"
-            VerticalAlignment="Bottom"
-            Padding="10" 
-            Height="51" Margin="1191,0,167.6,317.8">
-            <Button x:Name="button_signup2"
-                Template="{StaticResource NoMouseOverButtonTemplate}"
-                Content="Update" 
-                Margin="23.4,-4.6,21.8,-7.2" 
-                Padding="1" 
-                Background="White" 
-                Foreground="Black" 
-                FontSize="20" 
-                BorderThickness="0" FontFamily="Javanese Text" Height="43" VerticalAlignment="Bottom"/>
-        </Border>
-        <Border 
-            Background="white" 
-            CornerRadius="50"
-            VerticalAlignment="Bottom"
-            Padding="10" 
-            Height="51" Margin="1191,0,167.6,389.8">
-            <Button x:Name="button_signup3"
-                Template="{StaticResource NoMouseOverButtonTemplate}"
-                Content="Update" 
-                Margin="23.4,-4.6,21.8,-7.2" 
-                Padding="1" 
-                Background="White" 
-                Foreground="Black" 
-                FontSize="20" 
-                BorderThickness="0" FontFamily="Javanese Text" Height="43" VerticalAlignment="Bottom"/>
-        </Border>
-
-        <Button x:Name="watchList_button" Content="Your Watch List" HorizontalAlignment="Left" 
-                Margin="817,754,0,0" VerticalAlignment="Top" Width="210" Height="34" FontSize="15" 
+        <Button x:Name="watchList_button" Content="Your Watchlist" HorizontalAlignment="Left" 
+                Margin="643,720,0,0" VerticalAlignment="Top" Width="210" Height="34" FontSize="15" 
                 Background="#FFFDFFB2" FontWeight="Bold" FontFamily="Javanese Text" Click="watchList_button_Click"/>
 
-        <Image Margin="661,151,681.6,674.8" Source="Image9.png" Stretch="Fill"/>
-        <DataGrid x:Name="profile" Margin="220,344,904,467" AutoGenerateColumns="True" CanUserAddRows="False"/>
-        <Button x:Name="saveChanges" Content="Update" HorizontalAlignment="Left" Click="saveChanges_Click" Margin="613,346,0,467" Width="106"></Button>
+        <Image Margin="666,151,682,588" Source="Image9.png" Stretch="Fill"/>
+        <DataGrid x:Name="profile" Margin="440,307,456,241" AutoGenerateColumns="True" CanUserAddRows="False" FontSize="20" FontFamily="Javanese Text"/>
+
+        <Button x:Name="saveChanges" Foreground="White" Content="Update" HorizontalAlignment="Left" Click="saveChanges_Click" Margin="695,645,0,181" Width="106" FontFamily="Javanese Text" FontSize="15" Background="Black"/>
+
+        <StackPanel Margin="1224,10,41,67">
+            <Label Content="Select TV Shows:" FontSize="15" />
+            <ComboBox x:Name="myComboBox" Background="White" FontSize="15" RenderTransformOrigin="0.5,0.519"
+          SelectionChanged="myComboBox_SelectionChanged">
+                <ComboBoxItem Content="Game of Thrones" />
+                <ComboBoxItem Content="Gossip Girl" />
+                <ComboBoxItem Content="Friends" />
+            </ComboBox>
+        </StackPanel>
 
     </Grid>
 </Window>

@@ -16,13 +16,13 @@
             <Image x:Name="logo" Source="C:\Users\stefa\OneDrive\Desktop\School\Final Project\logo.jpg" 
                 HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Margin="10,0,0,0"/>
         </Border>
-        <Border CornerRadius="20" Background="#FDFFB2" Margin="347,263,373,158" RenderTransformOrigin="0.474,1.233">
+        <Border CornerRadius="20" Background="#FDFFB2" Margin="347,263,373,198" RenderTransformOrigin="0.474,1.233">
             <StackPanel>
                 <TextBox x:Name="txtEmail" Height="56" TextWrapping="Wrap"
-                    Margin="145,120,119.6,0" FontFamily="Javanese Text" FontSize="30"
+                    Margin="145,120,119.6,0" FontFamily="Javanese Text" FontSize="25"
                     Opacity="0.5" Background="#97959C" Foreground="Black" Width="426"/>
                 <PasswordBox x:Name="txtPassword" Height="55" 
-                    Margin="145,70,119.6,0" FontFamily="Javanese Text" FontSize="30" Opacity="0.5" Background="#97959C" Foreground="Black" RenderTransformOrigin="0.472,4.92" Width="426"/>
+                    Margin="145,70,119.6,0" FontFamily="Javanese Text" FontSize="25" Opacity="0.5" Background="#97959C" Foreground="Black" RenderTransformOrigin="0.472,4.92" Width="426"/>
             </StackPanel>
 
 
@@ -32,16 +32,16 @@
         <Image Margin="663,131,696,616" Source="Image2.png" Stretch="Fill"/>
         <Image Margin="463,373,1001,512" Source="Image3.png" Stretch="Fill"/>
         <Image Margin="453,541,989,335" Source="Image4.png" Stretch="Fill"/>
-        <TextBlock HorizontalAlignment="Left" Margin="606,795,0,0" TextWrapping="Wrap" Text="Do not have an accaunt?" VerticalAlignment="Top" FontFamily="Javanese Text" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="606,779,0,0" TextWrapping="Wrap" Text="Do not have an accaunt?" VerticalAlignment="Top" FontFamily="Javanese Text" FontSize="20"/>
         <Button x:Name="Signup_button" Content="Sign Up" BorderBrush="Transparent" 
-                Background="Transparent"  HorizontalAlignment="Left" Margin="821,793,0,0" VerticalAlignment="Top" Width="81" 
-                FontFamily="Javanese Text" FontSize="20" Height="36" Click="Signup_button_Click"  Template="{StaticResource NoMouseOverButtonTemplate}"/>
+                Background="Transparent"  HorizontalAlignment="Left" Margin="821,777,0,0" VerticalAlignment="Top" Width="81" 
+                FontFamily="Javanese Text" FontSize="20" Height="36" Click="Signup_button_Click"  Template="{StaticResource NoMouseOverButtonTemplate}" FontWeight="Bold"/>
         <Border 
             Background="Black" 
             CornerRadius="50"
             VerticalAlignment="Bottom"
             Padding="10" 
-            Height="74" Margin="619,0,646.6,188.8">
+            Height="74" Margin="618,0,648,164">
             <Button x:Name="Button_login"
                 Template="{StaticResource NoMouseOverButtonTemplate}"
                 Content="Log In" 

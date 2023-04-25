@@ -20,28 +20,28 @@
 
         <Image Margin="691,115,675,640" Source="Image1.png" Stretch="Fill" RenderTransformOrigin="0.466,0.849"/>
         <Button x:Name="Login_button" Content="Log In" BorderBrush="Transparent" Background="Transparent"  
-                HorizontalAlignment="Left" Margin="802,804,0,0" VerticalAlignment="Top" Width="70" FontFamily="Javanese Text"
-                FontSize="20" Height="36" Click="Login_button_Click" Template="{StaticResource NoMouseOverButtonTemplate}"/>
+                HorizontalAlignment="Left" Margin="802,771,0,0" VerticalAlignment="Top" Width="70" FontFamily="Javanese Text"
+                FontSize="20" Height="36" Click="Login_button_Click" Template="{StaticResource NoMouseOverButtonTemplate}" FontWeight="Bold"/>
 
 
         <Border CornerRadius="20" Background="#666666" Margin="346,227,352,152" Height="483">
             <StackPanel>
                 <TextBox x:Name="txtFirstName" Height="44" Width="401" TextWrapping="Wrap"
                          Margin="194,80,194.2,191"
-                         FontFamily="Javanese Text" FontSize="30" 
+                         FontFamily="Javanese Text" FontSize="25" 
                          UseLayoutRounding="True" Background="#97959C" Foreground="White" Opacity="0.5"/>
                 <TextBox x:Name="txtLastName" Height="44" Width="398" TextWrapping="Wrap"
-                         Margin="194,-240,194.2,0" FontFamily="Javanese Text" FontSize="30" Opacity="0.5" Background="#97959C" Foreground="White"/>
+                         Margin="194,-240,194.2,0" FontFamily="Javanese Text" FontSize="25" Opacity="0.5" Background="#97959C" Foreground="White"/>
                 <TextBox x:Name="txtEmail" Height="44" Width="398" TextWrapping="Wrap"
-                         Margin="194,-87,194.2,0" FontFamily="Javanese Text" FontSize="30" 
+                         Margin="194,-87,194.2,0" FontFamily="Javanese Text" FontSize="25" 
                          Opacity="0.5" Background="#97959C" Foreground="White"/>
                 <PasswordBox x:Name="txtPassword"  Height="44" Width="403" 
-                         Margin="194,15,194.2,0" FontFamily="Javanese Text" FontSize="30" Opacity="0.5" Background="#97959C" Foreground="White"/>
+                         Margin="194,15,194.2,0" FontFamily="Javanese Text" FontSize="25" Opacity="0.5" Background="#97959C" Foreground="White"/>
 
             </StackPanel>
 
         </Border>
-        <TextBlock HorizontalAlignment="Left" Margin="642,806,0,0" TextWrapping="Wrap" Text="Alredy a member?" VerticalAlignment="Top" FontFamily="Javanese Text" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="642,773,0,0" TextWrapping="Wrap" Text="Alredy a member?" VerticalAlignment="Top" FontFamily="Javanese Text" FontSize="20"/>
 
 
         <TextBlock HorizontalAlignment="Left" Margin="556,273,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" FontFamily="Javanese Text" FontSize="20" Foreground="White"/>
@@ -52,9 +52,9 @@
         <Border 
                     Background="white" 
                     CornerRadius="50"
-                    VerticalAlignment="Bottom"
+                    VerticalAlignment="Top"
                     Padding="10" 
-                    Height="64" Margin="636,0,631,164">
+                    Height="64" Margin="634,672,634,0">
             <Button x:Name="Button_signup"
                         Template="{StaticResource NoMouseOverButtonTemplate}"
                         Click="Button_Signup_Click"

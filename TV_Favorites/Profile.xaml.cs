@@ -41,7 +41,7 @@ namespace TV_Favorites
         private void LoadData()
         {
             sqlCon.Open();
-            string query = "SELECT id, email, firstName, lastName FROM [User] WHERE id=@userId";
+            string query = "SELECT id as [ID], email as [Email], firstName as [First Name], lastName as [Last Name], birthday as [Birthday] FROM [User] WHERE id=@userId";
             SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
             sqlCmd.CommandType = CommandType.Text;
             sqlCmd.Parameters.AddWithValue("@userId", loginState.Id);
@@ -94,6 +94,33 @@ namespace TV_Favorites
             Watch_List wl = new Watch_List();
             wl.Show();
             this.Close();
+        }
+
+        private void myComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBoxItem selectedItem = (ComboBoxItem)myComboBox.SelectedItem;
+            string selectedItemText = selectedItem.Content.ToString();
+
+            switch (selectedItemText)
+            {
+                case "Game of Thrones":
+                    Game_Of_Thrones got = new Game_Of_Thrones();
+                    got.Show();
+                    this.Close();
+                    break;
+                case "Gossip Girl":
+                    Gossip_Girl gg = new Gossip_Girl();
+                    gg.Show();
+                    this.Close();
+                    break;
+                case "Friends":
+                    Friends fr = new Friends();
+                    fr.Show();
+                    this.Close();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

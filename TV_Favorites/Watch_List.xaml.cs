@@ -100,5 +100,33 @@ namespace TV_Favorites
             p.Show();
             this.Close();
         }
+
+        private void myComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBoxItem selectedItem = (ComboBoxItem)myComboBox.SelectedItem;
+            string selectedItemText = selectedItem.Content.ToString();
+
+            switch (selectedItemText)
+            {
+                case "Game of Thrones":
+                    Game_Of_Thrones got = new Game_Of_Thrones();
+                    got.Show();
+                    this.Close();
+                    break;
+                case "Gossip Girl":
+                    Gossip_Girl gg = new Gossip_Girl();
+                    gg.Show();
+                    this.Close();
+                    break;
+                case "Friends":
+                    Friends fr = new Friends();
+                    fr.Show();
+                    this.Close();
+                    break;
+                default:
+                    break;
+            }
+        }
+
     }
 }

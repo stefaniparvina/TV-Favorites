@@ -127,10 +127,5 @@ namespace TV_Favorites
             log.Show();
             this.Close();
         }
-
-        private void txtFirstName1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }
